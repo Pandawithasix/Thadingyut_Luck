@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+.maincontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+   
+}
+.containerforpaper{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.containerforpaper > .envelope-wrapper{
+   background: white;
+   box-shadow: 0 0 40px rgb(218, 207, 207) ;
+}
+.containerforpaper > .envelope-wrapper > .envelope{
+    position: relative;
+    width: 300px ;
+    height: 230px;
+}
+.containerforpaper > .envelope-wrapper > .envelope::before{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    border-top: 130px solid rgb(247, 230, 230);
+    border-right: 150px solid transparent;
+    border-left: 150px solid transparent;
+    top: 0;
+    transform-origin: top;
+    transition: all 0.5s ease-in-out 0.7s;
+}  
+.containerforpaper > .envelope-wrapper > .envelope::after{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    border-top: 130px solid transparent;
+    border-left: 150px solid rgb(203, 180, 180);
+    border-right: 150px solid rgb(203, 180, 180);
+    border-bottom: 100px solid rgb(203, 180, 180);
+    bottom: 0;
+}
+.letter{
+    position: absolute;
+    border-radius: 2rem;
+    right: 20%;
+    bottom: 0%;
+    height: 80%;
+    width: 54%;
+    background:white;
+    transition: all 1s ease-in-out;
+    padding: 20px 10px;
+    box-shadow: 0 0 10px lightgray;
+}
+.letter > .text{
+    font-size: 10px;
+    color: black;
+    text-align: left;
+}
+.heart{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: lightcoral;
+    z-index: 4;
+    transform: translate(-50%, -20%) rotate(45deg);
+    transition: transform 0.5s ease-in-out 1s;
+    box-shadow: 0 0 10px lightblue;
+    cursor: pointer;
+}
+.heart::before,.heart::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: lightcoral;
+    border-radius: 50%;
+}
+.heart::before{
+    top: -7.5px;
+}
+.heart::after{
+    right: 7.5px;
+}
+.flap > .envelope::before{
+    /* z-index: -100 ; */
+    transform: rotate(180deg);
+}
+.flap > .envelope .letter{
+    bottom: 100px;
+    transform: scale(1.5);
+    transition-delay: 1s;   
+    z-index: 2;
+}
+.flap > .heart{
+    transform: rotate(90deg);
+    transition-delay: 0.4s;
+}
+/* ballon */
+img{
+    height: 300px;
+    width: 300px;
+    filter: drop-shadow(5px 5px 5px rgb(232, 132, 2));
+}
+.fly{
+    position: absolute;
+    transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+    animation: lighteffect 2s infinite;
+}
+.p1{
+    top: 60%;
+    left: 80%;
+    height: 120px;
+    width: 120px;
+    transform: rotate(10deg);
+    
+   
+}
+.p2{
+    top: 60%;
+    left: 20%;
+    height: 200px;
+    width: 200px;
+    transform: rotate(-27deg);
+}
+.p3{
+    top: -10%;
+    left: 5%;
+    height: 300px;
+    height: 300px;
+    transform: rotate(25deg);
+}
+.p4{
+    top: 25%;
+    left: 65%;
+    height: 150px;
+    width: 150px;
+    transform: rotate(-8deg);
+}
+.fly:hover{
+    filter: drop-shadow(15px 15px 15px rgb(232, 132, 2));
+    transform: scale(1.1);
+    transform: scale(1.1);
+}
+.note{
+    color:rgb(232, 132, 2); 
+    position: absolute;
+    top: 75%;
+}
+.copyright{
+    color:white;
+    position: absolute;
+    font-size: 0.7rem;
+}
+.text p span{
+    font-weight: bold;
+}
+@keyframes lighteffect {
+    0%{
+        filter:brightness(200%) drop-shadow(15px 15px 15px rgb(232, 132, 2));
+        transform: rotate(30deg);
+    }
+    15%{
+        filter:brightness(50%) drop-shadow(15px 15px 15px rgb(232, 132, 2));
+        transform: rotate(25deg);
+    }
+    25%{
+        filter: brightness(200%) drop-shadow(15px 15px 15px rgb(232, 132, 2));
+        transform: rotate(10deg);
+    }
+    35%{
+        filter: brightness(50%) drop-shadow(15px 15px 15px rgb(232, 132, 2));
+        transform: rotate(5deg);
+    }
+    50%{
+        filter: brightness(200%) drop-shadow(15px 15px 15px rgb(232, 132, 2));
+        transform: rotate(0deg);
+    }
+    65%{
+        filter: brightness(50%) drop-shadow(15px 15px 15px rgb(232, 132, 2));
+        transform: rotate(5deg);
+    }
+    75%{
+        filter: brightness(200%) drop-shadow(15px 15px 15px rgb(232, 132, 2));
+        transform: rotate(10deg);
+    }
+    85%{
+        filter: brightness(50%) drop-shadow(15px 15px 15px rgb(232, 132, 2));
+        transform: rotate(25deg);
+    }
+    100%{
+        filter: brightness(200%) drop-shadow(15px 15px 15px rgb(232, 132, 2));
+        transform: rotate(30deg);
+    }
+}
+/* --reponsive--- */
+@media (max-width: 768px) {
+    .envelope {
+        width: 250px;
+        height: 190px;
+    }
+    .letter {
+        width: 50%;
+    }
+    .fly {
+        height: 200px;
+        width: 200px;
+    }
+    .p2, .p3, .p4 {
+        height: 100px;
+        width: 100px;
+    }
+    .p1{
+        width: 300px;
+        height: 300px;
+        left: 70%;
+        top: 60%;
+    }
+    .p2{
+        left: 1%;
+        top: 60%;
+    }
+    .p3{
+        left: 20%;
+        top: 4%;
+        z-index: -1;
+    }
+    .p4{
+        left: 80%;
+    }
+}
+@media (max-width: 480px) {
+    .envelope {
+        width: 200px;
+        height: 160px;
+    }
+    .letter {
+        width: 50%;
+        font-size: 8px;
+    }
+    .fly {
+        height: 150px;
+        width: 150px;
+    }
+    .p1, .p2, .p3, .p4 {
+        height: 80px;
+        width: 80px;
+    }
+}

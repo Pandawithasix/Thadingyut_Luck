@@ -1,0 +1,246 @@
+body{
+    background-color: black;
+}
+.container{
+    /* display: flex;
+    justify-content: center;
+    min-height: 100vh;  
+    align-items: center; */
+    position: relative;
+    min-height: 100vh;
+    /* border: 10px solid white; */
+}
+img{
+    height: 300px;
+    width: 300px;
+    filter: drop-shadow(5px 5px 5px rgb(232, 132, 2));
+}
+.fly{
+    position: absolute;
+    transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+    animation: lighteffect 2s infinite;
+}
+.mmfont{
+    text-decoration: none;
+    color: black;
+}
+.p1{
+    top: 60%;
+    left: 80%;
+    height: 120px;
+    width: 120px;
+    transform: rotate(10deg);
+    
+   
+}
+.p2{
+    top: 60%;
+    left: 20%;
+    height: 200px;
+    width: 200px;
+    transform: rotate(-27deg);
+}
+.p3{
+    top: -10%;
+    left: 5%;
+    height: 300px;
+    height: 300px;
+    transform: rotate(25deg);
+}
+.p4{
+    top: 25%;
+    left: 65%;
+    height: 150px;
+    width: 150px;
+    transform: rotate(-8deg);
+}
+.fly:hover{
+    filter: drop-shadow(15px 15px 15px rgb(232, 132, 2));
+    transform: scale(1.1);
+    transform: scale(1.1);
+}
+.boxtext{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+h3{
+    color: white;
+}
+.copyright{
+    color:white;
+    position: absolute;
+    font-size: 0.7rem;
+}
+@keyframes lighteffect {
+    0%{
+        filter:brightness(200%) drop-shadow(15px 15px 15px rgb(232, 132, 2)) ;
+    }
+    25%{
+        filter: brightness(50%) drop-shadow(15px 15px 15px rgb(232, 132, 2));
+    }
+    50%{
+        filter: brightness(200%) drop-shadow(15px 15px 15px rgb(232, 132, 2));
+    }
+    75%{
+        filter: brightness(50%) drop-shadow(15px 15px 15px rgb(232, 132, 2));
+    }
+    100%{
+        filter: brightness(200%) drop-shadow(15px 15px 15px rgb(232, 132, 2));
+    }
+}
+/* ------------------buttom design------------------------- */
+.button-56 {
+    align-items: center;
+    background-color: #e89f16;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;  
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-56:after {
+    background-color: #eae4e4;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+  }
+  
+  .button-56:hover:after {
+    transform: translate(0, 0);
+  }
+  
+  .button-56:active {
+    background-color: #e77b1d;
+    outline: 0;
+  }
+  
+  .button-56:hover {
+    outline: 0;
+  }
+  
+  @media (min-width: 768px) {
+    .button-56 {
+      padding: 0 40px;
+    }
+  }
+  /* reponsive site */
+  @media screen and (max-width: 768px) {
+    .fly {
+        height: 100px;
+        width: 100px;
+    }
+
+    .p1 {
+        top: 80%;
+        left: 70%;
+        height: 100px;
+        width: 100px;
+    }
+
+    .p2 {
+        top: 40%;
+        left: 5%;
+        height: 150px;
+        width: 150px;
+    }
+
+    .p3 {
+        top: -10%;
+        left: 0%;
+        height: 200px;
+        width: 200px;
+    }
+
+    .p4 {
+        top: 20%;
+        left: 70%;
+        height: 120px;
+        width: 120px;
+    }
+
+    .boxtext {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .button-56 {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .fly {
+        height: 80px;
+        width: 80px;
+    }
+
+    .p1 {
+        top: 54%;
+        left: 40%;
+        height: 80px;
+        width: 80px;
+    }
+
+    .p2 {
+        top: 80%;
+        left: 1%;
+        height: 120px;
+        width: 120px;
+    }
+
+    .p3 {
+        top: -10%;
+        left: 0%;
+        height: 150px;
+        width: 150px;
+    }
+
+    .p4 {
+        top: 15%;
+        left: 70%;
+        height: 100px;
+        width: 100px;
+    }
+
+    .boxtext {
+        padding: 5px;
+    }
+    .boxtext img{
+        width: 350px;
+        height: 350;
+    }
+
+    .button-56 {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
